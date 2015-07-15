@@ -6,12 +6,11 @@ class Account(Base):
     __tablename__ = 'accounts'
     
     first_name = db.Column(db.String(128), nullable=False)
+    middle_initial = db.Column(db.String(128), nullable=True)
     last_name = db.Column(db.String(128), nullable=False)
-    full_name = first_name + last_name
     email = db.Column(db.String(128), nullable=False, unique=True)
-    
 
-    products = relationship("Product", backref="account")
+    pools = relationship("Pool", order_by="Pool.id", backref="house")
 
     def __repr__(self):
-        return "<%s|%d: %s (%s)>" % (self.uuid, self.id, self.email, self.name)
+        return "<%s|%d || %s %s. %s --%s>" % (self.uuid, self.id, self.first_name, self.middle_initial, self.last_name, self.email)
