@@ -1,2 +1,2 @@
-import test.model.base
-import test.model.account
+import bouillon.model.base
+import bouillon.model.account

@@ -7,6 +7,6 @@ Server = Flask(__name__)
 Server.config.from_object('config')
 db = SQLAlchemy(Server)
 
-import test.models
+import bouillon.models
 
 db.create_all()

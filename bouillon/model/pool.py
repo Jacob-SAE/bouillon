@@ -1,5 +1,5 @@
-from test import db
-from test.model.base import Base
+from bouillon import db
+from bouillon.model.base import Base
 from sqlalchemy.orm import relationship
 
 class Pool(Base):

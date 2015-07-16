@@ -1,4 +1,4 @@
-from test import db
+from bouillon import db
 import uuid
 from sqlalchemy.types import TypeDecorator, CHAR
 from sqlalchemy.dialects.postgresql import UUID
