@@ -8,5 +8,6 @@ Server.config.from_object('config')
 db = SQLAlchemy(Server)
 
 import bouillon.models
+import bouillon.endpoints
 
 db.create_all()
